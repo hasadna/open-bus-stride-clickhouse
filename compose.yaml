@@ -1,0 +1,17 @@
+services:
+  clickhouse:
+    # pulled Sep 15, 2026
+    image: clickhouse/clickhouse-server@sha256:b1d9f9baec7727c779a6febb2a95eb08a8e1de3f463294e3ebb35c3d3fb30360
+    restart: unless-stopped
+    environment:
+      CLICKHOUSE_USER: openbus
+      CLICKHOUSE_PASSWORD: stride
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "1"
+    ports:
+      - "18123:8123"
+      - "19000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+
+volumes:
+  clickhouse_data:

@@ -1,0 +1,10 @@
+stride_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: clickhouse
+      schema: "default" # ClickHouse database for dbt models
+      host: "localhost"
+      port: 18123  # Defaults to 8123, 8443, 9000, 9440 depending on the secure and driver settings
+      user: "openbus" # User for all database operations
+      password: "stride" # Password for the user

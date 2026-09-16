@@ -1,0 +1,20 @@
+[project]
+name = "open-bus-stride-clickhouse"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "dbt-clickhouse>=1.10.2",
+    "dbt-core>=1.11.15",
+]
+
+#[dependency-groups]
+#dev = [
+#    "pytest>=8.0.0",
+#]
+
+#[build-system]
+#requires = ["hatchling"]
+#build-backend = "hatchling.build"
+
+#[project.scripts]
+#open-bus-stride-clickhouse = "app.cli:main"
